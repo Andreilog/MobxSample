@@ -1,11 +1,12 @@
 import {observable, action, computed} from 'mobx';
 
 class BirdStore {
-	@observable birds = [];
+	@observable
+	_birds = [];
 
 	@action
-	addBird = (bird) => {
-		this.birds.push(birds);
+	addBird(bird) {
+		this._birds.push(bird);
 	}
 
 	@computed get birdCount() {

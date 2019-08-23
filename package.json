@@ -56,6 +56,7 @@
     "style-loader": "1.0.0",
     "terser-webpack-plugin": "1.4.1",
     "ts-pnp": "1.1.2",
+    "typescript": "^3.5.3",
     "url-loader": "2.1.0",
     "webpack": "4.39.1",
     "webpack-dev-server": "3.2.1",
@@ -135,7 +136,12 @@
       "react-app"
     ],
     "plugins": [
-      "transform-decorators-legacy"
+	  [ "@babel/plugin-proposal-decorators", { "legacy": true } ],
+	  [ "@babel/plugin-proposal-class-properties", { "loose": true } ]
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.4.4"
   }
 }
